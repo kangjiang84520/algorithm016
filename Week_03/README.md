@@ -36,7 +36,7 @@
 5. [全排列-有重复数字](https://leetcode-cn.com/problems/permutations-ii/) 2 times
 
 ### 分治和回溯
-####典型题目
+#### 典型题目
 1. [Pow](https://leetcode-cn.com/problems/powx-n/) 0 time
 2. [子集](https://leetcode-cn.com/problems/subsets/) 0 time
 3. [多数元素](https://leetcode-cn.com/problems/majority-element/description/) 1 time
