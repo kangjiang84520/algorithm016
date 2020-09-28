@@ -20,20 +20,20 @@
 
 ### 泛型递归和树的递归
 #### 典型题目
-1. [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)  2 times
-2. [括号的生成](https://leetcode-cn.com/problems/generate-parentheses/) 2 times 
-3. [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/description/) 1 time
-4. [验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree)  1 time
-5. [二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) 2 times
-6. [二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 0 time
-7. [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) 0 time
+1. [爬楼梯70](https://leetcode-cn.com/problems/climbing-stairs/)  2 times
+2. [括号的生成22](https://leetcode-cn.com/problems/generate-parentheses/) 2 times 
+3. [翻转二叉树226](https://leetcode-cn.com/problems/invert-binary-tree/description/) 1 time
+4. [验证二叉搜索树98](https://leetcode-cn.com/problems/validate-binary-search-tree/)  1 time
+5. [二叉树的最大深度104](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) 2 times
+6. [二叉树的最小深度111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 0 time
+7. [二叉树的序列化与反序列化297](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) 0 time
 
 #### 课后作业
-1. [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) 2 times
-2. [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 0 time
-3. [组合](https://leetcode-cn.com/problems/combinations/) 0 time
-4. [全排列-无重复数字](https://leetcode-cn.com/problems/permutations/) 3 times
-5. [全排列-有重复数字](https://leetcode-cn.com/problems/permutations-ii/) 2 times
+1. [二叉树的最近公共祖先236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) 2 times
+2. [从前序与中序遍历序列构造二叉树105](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 0 time
+3. [组合77](https://leetcode-cn.com/problems/combinations/) 0 time
+4. [全排列-无重复数字46](https://leetcode-cn.com/problems/permutations/) 3 times
+5. [全排列-有重复数字47](https://leetcode-cn.com/problems/permutations-ii/) 2 times
 
 ### 分治和回溯
 #### 典型题目
