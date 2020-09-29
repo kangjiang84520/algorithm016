@@ -50,6 +50,7 @@
 2. 子集问题，相对于组合、排列，递归和回溯 不在for循环中，递归的终止条件也不一样，原因是。。。
 3. 组合，在递归前后，就是简单的选择与不选择； 排列，要在组合的选与不选中，还要加上选过和没选过的判断。
 ```java
+    // Subsets
 private void helper1(int[] nums, int start, int len, List<Integer> ele, List<List<Integer>> resList) {
         if (start == nums.length) {
             resList.add(new ArrayList<>(ele));
@@ -63,6 +64,48 @@ private void helper1(int[] nums, int start, int len, List<Integer> ele, List<Lis
         ele.remove(ele.size() - 1);
         helper1(nums, start + 1, len, ele, resList);
         // }
+    }
+	
+	// Combine 组合
+	private void helper1(int n, int k, int begin, List<Integer> ele, List<List<Integer>> resList) {
+        // terminator
+        if (k == ele.size()) {
+            resList.add(new ArrayList<>(ele));
+            return;
+        }
+        // 优化点，剪枝：搜索起点的上界 + 接下来要选择的元素个数 - 1 = n
+        // for (int i = begin; i <= (n - (k - ele.size()) + 1); i++)
+        for (int i = begin; i <= n; i++) {
+            // deal with current logic
+            ele.add(i);
+            // drill down
+            helper1(n, k, i + 1, ele, resList);
+            // reverse if need
+            ele.remove(ele.size() - 1);
+        }
+    }
+	
+	// Permute 排列 
+	private void helper(int[] nums, Deque<Integer> ele, boolean[] visited, List<List<Integer>> resList) {
+        // 叶子节点处：变量 path 所指向的列表 在深度优先遍历的过程中只有一份 ，深度优先遍历完成以后，回到了根结点，成为空列表。
+        // 在 Java 中，参数传递是 值传递，对象类型变量在传参的过程中，复制的是变量的地址。这些地址被添加到 res 变量，但实际上指向的是同一块内存地址，
+        // 因此我们会看到 6 个空的列表对象。解决的方法很简单，在 res.add(path); 这里做一次拷贝即可。
+        if (nums.length == ele.size()) {
+            resList.add(new ArrayList<>(ele));
+        }
+        // 在非叶子结点处，产生不同的分支，这一操作的语义是：在还未选择的数中依次选择一个元素作为下一个位置的元素，这显然得通过一个循环实现。
+        for (int i = 0; i < nums.length; i++) {
+            if (visited[i]) {
+                continue;
+            } else {
+                visited[i] = true;
+                ele.push(nums[i]);
+                helper(nums, ele, visited, resList);
+                // 注意：下面这两行代码发生 「回溯」，回溯发生在从 深层结点 回到 浅层结点 的过程，代码在形式上和递归之前是对称的
+                visited[i] = false;
+                ele.pop();
+            }
+        }
     }
 ```
 
