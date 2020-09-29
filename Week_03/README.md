@@ -44,3 +44,26 @@
 4. [求众数2](https://leetcode-cn.com/problems/majority-element-ii/) 1 time
 5. [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) 0 time
 6. [N皇后](https://leetcode-cn.com/problems/n-queens/) 0 time
+
+#### 做题的心得
+1. 组合问题，相对于排列问题而言，不计较一个组合内元素的顺序性（即 [1, 2, 3] 与 [1, 3, 2] 认为是同一个组合），因此很多时候需要按某种顺序展开搜索，这样才能做到不重不漏；
+2. 子集问题，相对于组合、排列，递归和回溯 不在for循环中，递归的终止条件也不一样，原因是。。。
+3. 组合，在递归前后，就是简单的选择与不选择； 排列，要在组合的选与不选中，还要加上选过和没选过的判断。
+```java
+private void helper1(int[] nums, int start, int len, List<Integer> ele, List<List<Integer>> resList) {
+        if (start == nums.length) {
+            resList.add(new ArrayList<>(ele));
+            return;
+        }
+        // for (int i = start; i < len; i++) {
+        // select it
+        ele.add(nums[start]);
+        helper1(nums, start + 1, len, ele, resList);
+        // dont select it
+        ele.remove(ele.size() - 1);
+        helper1(nums, start + 1, len, ele, resList);
+        // }
+    }
+```
+
+
