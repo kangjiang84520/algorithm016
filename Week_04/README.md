@@ -6,6 +6,7 @@
 3. 能够通过索引访问（index accessible）
 
 #### 代码模板
+```java
 left = 0, right = len(array) - 1
 while left <= right
 	mid = (left + right) / 2
@@ -16,4 +17,4 @@ while left <= right
 		left = mid + 1
 	else 
 		right = mid - 1
-	
+```
