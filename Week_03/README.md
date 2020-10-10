@@ -39,7 +39,7 @@
 ### 分治和回溯
 #### 典型题目
 1. [Pow](https://leetcode-cn.com/problems/powx-n/) 0 time
-2. [子集](https://leetcode-cn.com/problems/subsets/) 1 time
+2. [子集](https://leetcode-cn.com/problems/subsets/) 2 time
 3. [多数元素](https://leetcode-cn.com/problems/majority-element/description/) 1 time
 4. [求众数2](https://leetcode-cn.com/problems/majority-element-ii/) 1 time
 5. [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) 0 time
