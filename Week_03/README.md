@@ -37,6 +37,32 @@
 5. [全排列-有重复数字47](https://leetcode-cn.com/problems/permutations-ii/) 2 times
 
 ### 分治和回溯
+#### 分治本质上也是递归
+1. 代码模板：
+```java
+private static int divide_conquer(Problem problem, ...) {
+	// recursion terminator
+	if (problem == null) {
+		int res = process_last_result();
+		return res;
+	}
+	// prepare data
+	subProblems = split_problem(problem);
+	
+	
+	
+	// conquer subproblem
+	res0 = divide_conquer(subProblems[0]);
+	res1 = divide_conquer(subProblems[1]);
+	...
+	
+	// process and generate the final result
+	result = process_result(res0, res1, ...);
+	return result;
+	
+	// revert the current level if need
+}
+```
 #### 典型题目
 1. [Pow](https://leetcode-cn.com/problems/powx-n/) 0 time
 2. [子集](https://leetcode-cn.com/problems/subsets/) 2 time
