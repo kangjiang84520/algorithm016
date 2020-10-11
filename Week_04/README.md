@@ -1,5 +1,42 @@
 学习笔记
 
+### DFS and BFS
+#### DFS
+[深度优先搜索](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/) 算法（英语：Depth-First-Search，DFS）是一种用于遍历或搜索树或图的算法。
+这个算法会 尽可能深 的搜索树的分支。当结点 v 的所在边都己被探寻过，搜索将 回溯 到发现结点 v 的那条边的起始结点。
+这一过程一直进行到已发现从源结点可达的所有结点为止。
+如果还存在未被发现的结点，则选择其中一个作为源结点并重复以上过程，整个进程反复进行直到所有结点都被访问为止。
+#### BFS
+[广度（宽度）优先遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/bfs-de-shi-yong-chang-jing-zong-jie-ceng-xu-bian-l/)：水波纹，如果想找 最短路径 or 层序遍历，一般就是BFS。
+1. 利用队列实现；
+2. 从源节点开始依次按照宽度进入队列，然后弹出；
+3. 每弹出一个节点，把该节点所有没有进入过队列的邻接点放入队列（依赖set内元素唯一性来实现）；
+4. 直到队列为空。
+##### 代码模板
+```java 
+    public static void bfs(Node node) {
+        if (node == null) {
+            return;
+        }
+        Queue<Node> queue = new LinkedList<Node>();
+        HashSet<Node> visited = new HashSet<Node>();
+        queue.add(node);
+        visited.add(node);
+        while (!queue.isEmpty()) {
+            Node cur = queue.poll();
+            System.out.println(cur.value);
+            for (Node next : cur.nexts) {
+                if (!visited.contains(next)) {
+                    visited.add(next);
+                    queue.add(next);
+                }
+            }
+        }
+    }
+```
+##### 实战题目
+1. [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description)
+
 ### 二分查找的前提
 1. 目标函数单调性（单调递增或者递减）
 2. 存在上下界（bounded）
