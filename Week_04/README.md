@@ -35,8 +35,9 @@
     }
 ```
 ##### 实战题目
-1. [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description) 2 times;
+1. [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description) 2 times; 此题有[心得](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/dfshe-bfsdu-gei-ni-men-by-lan-tian-cang-hai-t/)
 2. [最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)  1 times；
+3. 
 
 ### 二分查找的前提
 1. 目标函数单调性（单调递增或者递减）
