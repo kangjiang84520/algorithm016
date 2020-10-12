@@ -38,6 +38,21 @@
 1. [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description) 2 times; 此题有[心得](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/dfshe-bfsdu-gei-ni-men-by-lan-tian-cang-hai-t/)
 2. [最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)  1 times；
 3. [括号生成](https://leetcode-cn.com/problems/generate-parentheses/#/description) 3 times [心得](https://leetcode-cn.com/problems/generate-parentheses/solution/hui-su-suan-fa-by-liweiwei1419/)
+4. [在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/#/description) 1 times
+#### 课后作业
+1. [单词接龙](https://leetcode-cn.com/problems/word-ladder/description/) 1 times
+2. [单词接龙2](https://leetcode-cn.com/problems/word-ladder-ii/description/) 0 time
+3. [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) 1 times
+4. [扫雷游戏](https://leetcode-cn.com/problems/minesweeper/description/) 0 time
+
+### 贪心
+#### 课后作业
+1. [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/) 2 times 
+2. [买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/) 2 times [股票问题汇集](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/si-chong-shi-xian-xiang-xi-tu-jie-122-mai-mai-gu-p/)
+3. [分发饼干](https://leetcode-cn.com/problems/assign-cookies/description/) 0 time
+4. [模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/description/) 1 times
+5. [跳跃游戏](https://leetcode-cn.com/problems/jump-game/) 2 times
+6. [跳跃游戏2](https://leetcode-cn.com/problems/jump-game-ii/) 0 time
 
 ### 二分查找的前提
 1. 目标函数单调性（单调递增或者递减）
