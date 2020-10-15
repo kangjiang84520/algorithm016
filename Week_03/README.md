@@ -31,7 +31,7 @@
 
 #### 课后作业
 1. [二叉树的最近公共祖先236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) 2 times
-2. [从前序与中序遍历序列构造二叉树105](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 0 time
+2. [从前序与中序遍历序列构造二叉树105](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 1 time
 3. [组合77](https://leetcode-cn.com/problems/combinations/) 1 time
 4. [全排列-无重复数字46](https://leetcode-cn.com/problems/permutations/) 4 times
 5. [全排列-有重复数字47](https://leetcode-cn.com/problems/permutations-ii/) 2 times

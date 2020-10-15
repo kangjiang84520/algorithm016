@@ -1,5 +1,16 @@
 # 学习笔记
 
+### 树、二叉树、二叉搜索树
+[二叉搜索树Demo](https://visualgo.net/zh/bst)
+####
+实战题目&课后作业
+1. [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) 2 times
+2. [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) 2 times
+3. [N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/) 0 time
+4. [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/) 2 times
+5. [N叉树的层次遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/) 1 time
+
+
 ### HashMap学习小结
 #### 基本概念
 1. java中Map是键值（key-value）映射表的数据结构，作用就是能高效通过key快速查找value元素；
