@@ -1,23 +1,26 @@
 学习笔记
 
-# 递归
-## 代码模板
+## 递归
+### 代码模板
 1. terminator
 2. deal with current logic
 3. drill down
-4. reverse the current level status if needed
-需要特别注意的有三点：
+4. reverse the current level status if needed 
+### 需要特别注意的有三点：
 1. terminator部分，需要注意是否需要new copy，以防止递归退出本层后，存储的引用部分内容丢失，判断条件就是看递归调用的层与层之间，
 是靠每一层的临时变量还是靠递归调用之外的参数（此时一般是通过递归调用的参数传递）
 2. drill down 部分，要注意参数的变化；
 3. 2、3、4会出现在循环中，比如求[组合77](https://leetcode-cn.com/problems/combinations/)、[全排列-无重复数字46](https://leetcode-cn.com/problems/permutations/) 、[全排列-有重复数字47](https://leetcode-cn.com/problems/permutations-ii/)
+4. 清理当前层不是必须的，很多时候因为都是当前层的临时变量，离开当前层后，就随着出栈自动释放了；需要处理当前层的场景，往往是全局变量存在的场景，需要把全局变量中的状态恢复到进入当前层之前的状态。
 
 #### 要刻意训练递归思维，不要人肉递归；
 #### 很多时候，手工模拟计算前1~3步，会对递归有帮助；
 #### 不要忘记递归终止条件
 #### 在递归过程中，可以根据条件，进行剪枝（主动放弃一些递归进入的路径）
 #### 树的题目，一般考虑递归写法
-#### 要避免傻递归，使用记忆会递归；
+#### 要避免傻递归
+1. 出现傻递归的原因：存在重复子问题。 
+2. 如何避免：使用[记忆化递归](https://leetcode-cn.com/problems/house-robber-iii/)（一般采用数组or Map，在刚进入当前层，就先查询注册本是否有该层的信息，如果有直接获取后返回；如果没有，则继续进行逻辑计算，并在计算完成离开该层之前，将该层计算的信息，登记注册）；
 
 ### 泛型递归和树的递归
 #### 典型题目
