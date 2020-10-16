@@ -31,7 +31,7 @@
 3. [翻转二叉树226](https://leetcode-cn.com/problems/invert-binary-tree/description/) 1 time
 4. [验证二叉搜索树98](https://leetcode-cn.com/problems/validate-binary-search-tree/)  1 time 心得：中序遍历是升序
 5. [二叉树的最大深度104](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) 2 times
-6. [二叉树的最小深度111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 1 time [心得](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/li-jie-zhe-dao-ti-de-jie-shu-tiao-jian-by-user7208/)(https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/liang-chong-die-dai-by-lan-tian-cang-hai-t/)：只有一侧孩子的情况下，最短路径是有孩子这一侧
+6. [二叉树的最小深度111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 1 time [心得](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/li-jie-zhe-dao-ti-de-jie-shu-tiao-jian-by-user7208/)：只有一侧孩子的情况下，最短路径是有孩子这一侧
 7. [二叉树的序列化与反序列化297](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) 0 time
 
 #### 课后作业
