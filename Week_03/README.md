@@ -22,16 +22,16 @@
 #### 树的题目，一般考虑递归写法
 #### 要避免傻递归
 1. 出现傻递归的原因：存在重复子问题。 
-2. 如何避免：使用[记忆化递归](https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/)（一般采用数组or Map，在刚进入当前层，就先查询注册本是否有该层的信息，如果有直接获取后返回；如果没有，则继续进行逻辑计算，并在计算完成离开该层之前，将该层计算的信息，登记注册）；
+2. 如何避免：使用[记忆化递归](https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/)（一般采用[数组](https://leetcode-cn.com/problems/climbing-stairs/solution/di-gui-ji-yi-hua-di-gui-dpgun-dong-dp-by-lan-tian-/)or Map，在刚进入当前层，就先查询注册本是否有该层的信息，如果有直接获取后返回；如果没有，则继续进行逻辑计算，并在计算完成离开该层之前，将该层计算的信息，登记注册）；
 
 ### 泛型递归和树的递归
 #### 典型题目
-1. [爬楼梯70](https://leetcode-cn.com/problems/climbing-stairs/)  2 times
-2. [括号的生成22](https://leetcode-cn.com/problems/generate-parentheses/) 2 times 
+1. [爬楼梯70](https://leetcode-cn.com/problems/climbing-stairs/)  3 times [心得](https://leetcode-cn.com/problems/climbing-stairs/solution/di-gui-ji-yi-hua-di-gui-dpgun-dong-dp-by-lan-tian-/)：多种解法（递推，递归，记忆化递归，DP）
+2. [括号的生成22](https://leetcode-cn.com/problems/generate-parentheses/) 2 times 心得：左括号随时添加，只要别超标就行，右括号只有小云左括号才能添加
 3. [翻转二叉树226](https://leetcode-cn.com/problems/invert-binary-tree/description/) 1 time
-4. [验证二叉搜索树98](https://leetcode-cn.com/problems/validate-binary-search-tree/)  1 time
+4. [验证二叉搜索树98](https://leetcode-cn.com/problems/validate-binary-search-tree/)  1 time 心得：中序遍历是升序
 5. [二叉树的最大深度104](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) 2 times
-6. [二叉树的最小深度111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 0 time
+6. [二叉树的最小深度111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/) 1 time [心得](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/li-jie-zhe-dao-ti-de-jie-shu-tiao-jian-by-user7208/)(https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/liang-chong-die-dai-by-lan-tian-cang-hai-t/)：只有一侧孩子的情况下，最短路径是有孩子这一侧
 7. [二叉树的序列化与反序列化297](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) 0 time
 
 #### 课后作业
