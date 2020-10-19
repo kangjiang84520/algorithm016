@@ -78,8 +78,8 @@ private static int divide_conquer(Problem problem, ...) {
 
 #### 做题的心得
 1. 组合问题，相对于排列问题而言，不计较一个组合内元素的顺序性（即 [1, 2, 3] 与 [1, 3, 2] 认为是同一个组合），因此很多时候需要按某种顺序展开搜索，这样才能做到不重不漏；
-2. 子集问题，相对于组合、排列，递归和回溯 不在for循环中，递归的终止条件也不一样，原因是。。。
-3. 组合，在递归前后，就是简单的选择与不选择； 排列，要在组合的选与不选中，还要加上选过和没选过的判断。
+2. 子集问题，相对于组合、排列，可以和他们一样，在for循环中进行递归和回溯，也可以 不在for循环中，递归的终止条件也不一样；
+3. [组合](https://leetcode-cn.com/problems/subsets/solution/shou-hua-tu-jie-zi-ji-hui-su-fa-xiang-jie-wei-yun-/)，在递归前后，就是简单的选择与不选择； 排列，要在组合的选与不选中，还要加上选过和没选过的判断。[参考](https://leetcode-cn.com/submissions/detail/116786573/)
 ```java
     // Subsets
 private void helper1(int[] nums, int start, int len, List<Integer> ele, List<List<Integer>> resList) {
