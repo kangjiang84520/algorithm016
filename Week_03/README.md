@@ -27,7 +27,7 @@
 ### 泛型递归和树的递归
 #### 典型题目
 1. [爬楼梯70](https://leetcode-cn.com/problems/climbing-stairs/)  3 times [心得](https://leetcode-cn.com/problems/climbing-stairs/solution/di-gui-ji-yi-hua-di-gui-dpgun-dong-dp-by-lan-tian-/)：多种解法（递推，递归，记忆化递归，DP）
-2. [括号的生成22](https://leetcode-cn.com/problems/generate-parentheses/) 2 times 心得：左括号随时添加，只要别超标就行，右括号只有小云左括号才能添加
+2. [括号的生成22](https://leetcode-cn.com/problems/generate-parentheses/) 3 times 心得：左括号随时添加，只要别超标就行，右括号只有小云左括号才能添加
 3. [翻转二叉树226](https://leetcode-cn.com/problems/invert-binary-tree/description/) 1 time
 4. [验证二叉搜索树98](https://leetcode-cn.com/problems/validate-binary-search-tree/)  1 time 心得：中序遍历是升序
 5. [二叉树的最大深度104](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) 2 times
@@ -37,7 +37,7 @@
 #### 课后作业
 1. [二叉树的最近公共祖先236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) 2 times
 2. [从前序与中序遍历序列构造二叉树105](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 1 time
-3. [组合77](https://leetcode-cn.com/problems/combinations/) 1 time
+3. [组合77](https://leetcode-cn.com/problems/combinations/) 2 time [心得](https://leetcode-cn.com/problems/combinations/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-ma-/)
 4. [全排列-无重复数字46](https://leetcode-cn.com/problems/permutations/) 4 times
 5. [全排列-有重复数字47](https://leetcode-cn.com/problems/permutations-ii/) 2 times
 
@@ -70,7 +70,7 @@ private static int divide_conquer(Problem problem, ...) {
 ```
 #### 典型题目
 1. [Pow](https://leetcode-cn.com/problems/powx-n/) 0 time
-2. [子集](https://leetcode-cn.com/problems/subsets/) 2 time
+2. [子集](https://leetcode-cn.com/problems/subsets/) 2 time [心得](https://leetcode-cn.com/problems/subsets/solution/shou-hua-tu-jie-zi-ji-hui-su-fa-xiang-jie-wei-yun-/) [code](https://leetcode-cn.com/submissions/detail/116786573/)
 3. [多数元素](https://leetcode-cn.com/problems/majority-element/description/) 1 time
 4. [求众数2](https://leetcode-cn.com/problems/majority-element-ii/) 1 time
 5. [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) 0 time
@@ -82,7 +82,7 @@ private static int divide_conquer(Problem problem, ...) {
 3. 组合，在递归前后，就是简单的选择与不选择； 排列，要在组合的选与不选中，还要加上选过和没选过的判断。
 ```java
     // Subsets
-private void helper1(int[] nums, int start, int len, List<Integer> ele, List<List<Integer>> resList) {
+	private void helper1(int[] nums, int start, int len, List<Integer> ele, List<List<Integer>> resList) {
         if (start == nums.length) {
             resList.add(new ArrayList<>(ele));
             return;
@@ -95,6 +95,17 @@ private void helper1(int[] nums, int start, int len, List<Integer> ele, List<Lis
         ele.remove(ele.size() - 1);
         helper1(nums, start + 1, len, ele, resList);
         // }
+    }
+	private void withTraceBack(int[] nums, int start, List<Integer> ele, List<List<Integer>> resList) {
+        resList.add(new ArrayList<>(ele));
+        for (int i = start; i < nums.length; i++) {
+            if (i > start && nums[i] == nums[i-1]) { // 去重
+                continue;
+            }
+            ele.add(nums[i]);
+            withTraceBack(nums, i+1, ele, resList);
+            ele.remove(ele.size() - 1);
+        }
     }
 	
 	// Combine 组合
