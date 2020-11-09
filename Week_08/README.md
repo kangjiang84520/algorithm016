@@ -18,11 +18,11 @@ a = a ^ b;
 ```
 
 ### 异或的关键操作
-X^0=X
-X^1s=~X //1s=~0
-X^(~X)=1s
-X^X=0
-a^b^c=a^(b^c)=(a^b)^c // associative
+1. X^0=X
+2. X^1s=~X //1s=~0
+3. X^(~X)=1s
+4. X^X=0
+5. a^b^c=a^(b^c)=(a^b)^c // associative
 
 ### 位移运算
 左移<< 乘2
