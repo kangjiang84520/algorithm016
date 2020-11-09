@@ -6,15 +6,41 @@
 这个算法会 尽可能深 的搜索树的分支。当结点 v 的所在边都己被探寻过，搜索将 回溯 到发现结点 v 的那条边的起始结点。
 这一过程一直进行到已发现从源结点可达的所有结点为止。
 如果还存在未被发现的结点，则选择其中一个作为源结点并重复以上过程，整个进程反复进行直到所有结点都被访问为止。
+#### 代码模板
+```java
+	public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> allResults = new ArrayList<>();
+        if(root==null){
+            return allResults;
+        }
+        travel(root,0,allResults);
+        return allResults;
+    }
+
+
+    private void travel(TreeNode root,int level,List<List<Integer>> results){
+        if(results.size()==level){ // 第一次来到此层的时候（二叉树就是访问left节点的时候，N叉树就是访问本层第一个节点的时候）
+            results.add(new ArrayList<>());
+        }
+        results.get(level).add(root.val);
+        if(root.left!=null){ // 如果是N叉树，这里就是循环访问孩子节点
+            travel(root.left,level+1,results);
+        }
+        if(root.right!=null){
+            travel(root.right,level+1,results);
+        }
+    }
+```
 #### BFS
 [广度（宽度）优先遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/bfs-de-shi-yong-chang-jing-zong-jie-ceng-xu-bian-l/)：水波纹，如果想找 最短路径 or 层序遍历，一般就是BFS。
 1. 利用队列实现；
 2. 从源节点开始依次按照宽度进入队列，然后弹出；
 3. 每弹出一个节点，把该节点所有没有进入过队列的邻接点放入队列（依赖set内元素唯一性来实现）；
 4. 直到队列为空。
+5. BFS不等于层次遍历，需要稍微[改造](https://mp.weixin.qq.com/s?__biz=MzA5ODk3ODA4OQ==&mid=2648167212&idx=1&sn=6af5ffe5b69075b21bb4743ddcee4e7c&chksm=88aa236abfddaa7cae70b42edb299d0a52d9f1cc4fc1fdba1116972fc0ca0275b8bfdf10851b&token=1607921395&lang=zh_CN#rd)一下BFS代码才能做到层次遍历（改造点：在每一层遍历开始前，先记录队列中的结点数量 n（也就是这一层的结点数量），然后一口气处理完这一层的 n 个结点。）
 ##### 代码模板
 ```java 
-    public static void bfs(Node node) {
+    public static void bfs(Node node) { // for graph
         if (node == null) {
             return;
         }
@@ -33,6 +59,42 @@
             }
         }
     }
+	
+	// for Tree
+	public class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+
+		TreeNode(int x) {
+			val = x;
+		}
+	}
+
+	public List<List<Integer>> levelOrder(TreeNode root) {
+		List<List<Integer>> allResults = new ArrayList<>();
+		if (root == null) {
+			return allResults;
+		}
+		Queue<TreeNode> nodes = new LinkedList<>();
+		nodes.add(root);
+		while (!nodes.isEmpty()) {
+			int size = nodes.size();
+			List<Integer> results = new ArrayList<>();
+			for (int i = 0; i < size; i++) {
+				TreeNode node = nodes.poll();
+				results.add(node.val);
+				if (node.left != null) {
+					nodes.add(node.left);
+				}
+				if (node.right != null) {
+					nodes.add(node.right);
+				}
+			}
+			allResults.add(results);
+		}
+		return allResults;
+	}
 ```
 ##### 实战题目
 1. [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/#/description) 2 times; 此题有[心得](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/dfshe-bfsdu-gei-ni-men-by-lan-tian-cang-hai-t/)
